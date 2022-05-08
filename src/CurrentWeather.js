@@ -1,9 +1,9 @@
 import React from "react";
 
-function CurrentWeather(props) {
+export default function CurrentWeather(props) {
   return (
     <div className="Current Weather">
-      <image
+      <img
         src="http://openweathermap.org/img/wn/10d@2x.png"
         alt="rainy"
         id="icon"
@@ -27,4 +27,3 @@ function CurrentWeather(props) {
     </div>
   );
 }
-export default CurrentWeather();

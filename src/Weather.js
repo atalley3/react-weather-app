@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 
-function Weather() {
+export default function Weather() {
   let [city, setCity] = useState(null);
   let [weatherInfo, setWeatherInfo] = useState({});
   const apiKey = "bcdada43905d3c2d7aa9f45a7ce30f8b";
@@ -35,7 +35,7 @@ function Weather() {
           type="search"
           placeholder="Enter a city..."
           className="form-control"
-          autocomplete="off"
+          autoComplete="off"
           onChange={updateCity}
         />
         <input type="submit" value="Search" />
@@ -44,5 +44,3 @@ function Weather() {
     </div>
   );
 }
-
-export default Weather;
