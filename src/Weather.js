@@ -31,16 +31,18 @@ export default function Weather() {
 
   return (
     <div className="Weather">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a city..."
-          className="form-control"
-          autoComplete="off"
-          onChange={updateCity}
-        />
-        <input type="submit" value="Search" />
-      </form>
+      <div className="weatherSearch">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            className="form-control"
+            autoComplete="off"
+            onChange={updateCity}
+          />
+          <input type="submit" value="Search" className="btn btn-primary" />
+        </form>
+      </div>
       <CurrentWeather info={weatherInfo} />
     </div>
   );

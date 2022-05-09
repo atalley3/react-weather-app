@@ -6,10 +6,11 @@ export default function CurrentWeather(props) {
   let iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   let wind = props.info.wind;
   return (
-    <div className="Current Weather">
+    <div className="CurrentWeather">
       <img src={iconUrl} alt={props.info.despcription} id="icon" />
       <div className="temp">
-        {Math.round(props.info.temperature)}º<span>F</span>
+        {Math.round(props.info.temperature)}
+        <span>ºF</span>
       </div>
       <div className="Details">
         <ul>

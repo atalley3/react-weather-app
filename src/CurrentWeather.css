@@ -1,3 +1,38 @@
 .CurrentWeather {
   display: flex;
+  justify-content: space-between;
+  height: 93px;
+}
+.CurrentWeather .Description {
+  text-align: right;
+}
+.CurrentWeather .cityName {
+  font-size: 28px;
+  font-weight: 700;
+}
+.CurrentWeather .temp {
+  display: inline-block;
+  font-size: 48px;
+  vertical-align: top;
+  line-height: 60px;
+  position: relative;
+  top: -6px;
+}
+.CurrentWeather .temp span {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+}
+.CurrentWeather .Details {
+  color: #70757a;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+}
+.CurrentWeather img {
+  display: block;
+  margin: 0px auto;
+  position: relative;
+  top: -15px;
+  left: -15px;
 }
