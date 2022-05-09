@@ -1,4 +1,5 @@
 import React from "react";
+import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
   let icon = props.info.icon;
