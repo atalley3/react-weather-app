@@ -1,23 +1,15 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 import DailyForecast from "./DailyForecast";
 import "./FutureForecast.css";
 
-export default function FutureForecast(props) {
-  let lat = props.location.lat;
-  let lon = props.location.lon;
-  let units = props.units;
-  const apiKey = props.apiKey;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=${units}`;
-  let [forecast, setForecast] = useState({
+export default function FutureForecast() {
+  let forecast = {
     dt: "Day of Week",
     tempMax: 150,
     tempMin: 0,
     iconAlt: "Ash",
     icon: "50d",
-    humidity: 100,
-    wind: 50,
-  });
+  };
 
   return (
     <div className="FutureForecast">
