@@ -5,7 +5,15 @@ import "./Weather.css";
 
 export default function Weather() {
   let [city, setCity] = useState(null);
-  let [weatherInfo, setWeatherInfo] = useState({});
+  let [weatherInfo, setWeatherInfo] = useState({
+    temperature: 100,
+    icon: "50d",
+    humidity: 100,
+    wind: 50,
+    description: "whats happening?",
+    dt: 0,
+    city: "Xanadu",
+  });
   const apiKey = "bcdada43905d3c2d7aa9f45a7ce30f8b";
   let units = "imperial";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
