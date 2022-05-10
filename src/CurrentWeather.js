@@ -1,10 +1,12 @@
 import React from "react";
 import "./CurrentWeather.css";
+import DateTimeUpdate from "./DayTimeUpdate";
 
 export default function CurrentWeather(props) {
   let icon = props.info.icon;
   let iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   let wind = props.info.wind;
+  let dt = props.info.dt;
   return (
     <div className="CurrentWeather">
       <img src={iconUrl} alt={props.info.despcription} id="icon" />
@@ -21,7 +23,8 @@ export default function CurrentWeather(props) {
       <div className="Description">
         <div className="cityName">{props.info.city}</div>
         <div className="DayTime">
-          <small>Last Updated:</small>Monday 01:57PM
+          <small>Last Updated:</small>
+          <DateTimeUpdate dt={dt} full={true} />
         </div>
         <div>{props.info.description}</div>
       </div>

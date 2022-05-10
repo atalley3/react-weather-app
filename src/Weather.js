@@ -11,7 +11,7 @@ export default function Weather() {
     humidity: 100,
     wind: 50,
     description: "whats happening?",
-    dt: 0,
+    dt: 1000000000,
     city: "Xanadu",
   });
   const apiKey = "bcdada43905d3c2d7aa9f45a7ce30f8b";
