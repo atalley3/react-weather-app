@@ -1,6 +1,6 @@
 import React from "react";
 import "./CurrentWeather.css";
-import DateTimeUpdate from "./DayTimeUpdate";
+import DayTimeUpdate from "./DayTimeUpdate";
 
 export default function CurrentWeather(props) {
   let icon = props.info.icon;
@@ -25,7 +25,7 @@ export default function CurrentWeather(props) {
         <div className="cityName">{props.info.city}</div>
         <div className="DayTime">
           <small>Last Updated:</small>
-          <DateTimeUpdate dt={dt} full={true} />
+          <DayTimeUpdate dt={dt} full={true} />
         </div>
         <div>{props.info.description}</div>
       </div>

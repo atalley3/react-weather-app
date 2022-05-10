@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DateTimeUpdate(props) {
+export default function DayTimeUpdate(props) {
   function formateDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
