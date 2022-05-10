@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 import "./Weather.css";
+import FutureForcast from "./FutureForecast";
 
 export default function Weather() {
   let [city, setCity] = useState(null);
@@ -11,8 +12,13 @@ export default function Weather() {
     humidity: 100,
     wind: 50,
     description: "whats happening?",
-    dt: 1000000000,
+    dt: 882000000,
     city: "Xanadu",
+    iconAlt: "Ash",
+  });
+  let [location, setLocation] = useState({
+    lat: 0,
+    lon: 0,
   });
   const apiKey = "bcdada43905d3c2d7aa9f45a7ce30f8b";
   let units = "imperial";
@@ -27,6 +33,11 @@ export default function Weather() {
       description: response.data.weather[0].description,
       dt: response.data.dt,
       city: response.data.name,
+      iconAlt: response.data.weather[0].main,
+    });
+    setLocation({
+      lat: response.data.coord.lat,
+      lon: response.data.coords.lon,
     });
   }
   function handleSubmit(event) {
@@ -52,6 +63,7 @@ export default function Weather() {
         </form>
       </div>
       <CurrentWeather info={weatherInfo} />
+      <FutureForcast location={location} units={units} apiKey={apiKey} />
     </div>
   );
 }

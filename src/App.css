@@ -9,5 +9,6 @@ ul {
 }
 .App footer.Footer {
   font-size: 12px;
-  margin: 15px;
+  line-height: 24px;
+  margin: 20px;
 }

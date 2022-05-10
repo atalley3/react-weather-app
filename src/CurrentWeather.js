@@ -4,12 +4,13 @@ import DateTimeUpdate from "./DayTimeUpdate";
 
 export default function CurrentWeather(props) {
   let icon = props.info.icon;
+  let iconAlt = props.info.iconAlt;
   let iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
   let wind = props.info.wind;
   let dt = props.info.dt;
   return (
     <div className="CurrentWeather">
-      <img src={iconUrl} alt={props.info.despcription} id="icon" />
+      <img src={iconUrl} alt={iconAlt} id="icon" />
       <div className="temp">
         {Math.round(props.info.temperature)}
         <span>ºF</span>
