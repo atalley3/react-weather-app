@@ -53,13 +53,13 @@ export default function FutureForecast(props) {
   if (loaded) {
     return (
       <div className="FutureForecast">
-        <DailyForecast forecast={forecast[1]} />
-        <DailyForecast forecast={forecast[2]} />
-        <DailyForecast forecast={forecast[3]} />
-        <DailyForecast forecast={forecast[4]} />
-        <DailyForecast forecast={forecast[5]} />
-        <DailyForecast forecast={forecast[6]} />
-        <DailyForecast forecast={forecast[7]} />
+        <DailyForecast forecast={forecast[1]} day={null} />
+        <DailyForecast forecast={forecast[2]} day={null} />
+        <DailyForecast forecast={forecast[3]} day={null} />
+        <DailyForecast forecast={forecast[4]} day={null} />
+        <DailyForecast forecast={forecast[5]} day={null} />
+        <DailyForecast forecast={forecast[6]} day={null} />
+        <DailyForecast forecast={forecast[7]} day={null} />
       </div>
     );
   }
