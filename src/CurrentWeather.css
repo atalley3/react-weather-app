@@ -1,18 +1,26 @@
 .CurrentWeather {
   display: flex;
-  justify-content: space-between;
-  height: 93px;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  height: 75px;
+  color: var(--primary-color);
 }
 .CurrentWeather .Description {
   text-align: right;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--secondary-color);
 }
 .CurrentWeather .cityName {
-  font-size: 28px;
+  font-size: 22px;
+  line-height: 26px;
   font-weight: 700;
+  color: var(--primary-color);
 }
 .CurrentWeather .temp {
   display: inline-block;
-  font-size: 48px;
+  font-size: 60px;
   vertical-align: top;
   line-height: 60px;
   position: relative;
@@ -22,17 +30,23 @@
   display: inline-block;
   font-size: 16px;
   line-height: 24px;
+  position: relative;
+  top: -30px;
+  color: var(--secondary-color);
 }
 .CurrentWeather .Details {
-  color: #70757a;
+  color: var(--secondary-color);
   display: inline-block;
   font-size: 12px;
   line-height: 16px;
+  text-transform: capitalize;
+  position: relative;
+  top: -30px;
+  text-align: start;
 }
 .CurrentWeather img {
   display: block;
-  margin: 0px auto;
+  margin: 0px;
   position: relative;
-  top: -15px;
-  left: -15px;
+  top: 12px;
 }

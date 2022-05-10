@@ -1,8 +1,7 @@
 .Weather {
   display: block;
-  margin: 20px auto;
-  max-width: 600px;
-  border: 1px solid black;
+  margin: 15px auto;
+  max-width: 652px;
   border-radius: 10px;
   box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -11,9 +10,6 @@
 .Weather .weatherSearch {
   margin: 10px auto;
   display: block;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 10px;
 }
