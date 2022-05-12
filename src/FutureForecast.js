@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import DailyForecast from "./DailyForecast";
 import "./FutureForecast.css";
 import axios from "axios";
 
 export default function FutureForecast(props) {
-  const [loaded, setLoaded] = useState(false); //triggers conditional rendering
   //api call info
   let units = props.units;
   let apiKey = props.apiKey;
@@ -32,35 +31,24 @@ export default function FutureForecast(props) {
         iconAlt: response.data.daily[i].weather[0].main,
         icon: response.data.daily[i].weather[0].icon,
       });
+      i++;
     }
-    setLoaded(true);
   }
-  if (!loaded) {
+  function getData() {
     axios.get(apiUrl).then(createFutureWeatherArray);
-    return (
-      <div className="FutureForecast">
-        <hr />
-        <DailyForecast forecast={forecast[0]} day="Mon" />
-        <DailyForecast forecast={forecast[0]} day="Tues" />
-        <DailyForecast forecast={forecast[0]} day="Wed" />
-        <DailyForecast forecast={forecast[0]} day="Thur" />
-        <DailyForecast forecast={forecast[0]} day="Fri" />
-        <DailyForecast forecast={forecast[0]} day="Sat" />
-        <DailyForecast forecast={forecast[0]} day="Sun" />
-      </div>
-    );
   }
-  if (loaded) {
-    return (
-      <div className="FutureForecast">
-        <DailyForecast forecast={forecast[1]} day={null} />
-        <DailyForecast forecast={forecast[2]} day={null} />
-        <DailyForecast forecast={forecast[3]} day={null} />
-        <DailyForecast forecast={forecast[4]} day={null} />
-        <DailyForecast forecast={forecast[5]} day={null} />
-        <DailyForecast forecast={forecast[6]} day={null} />
-        <DailyForecast forecast={forecast[7]} day={null} />
-      </div>
-    );
-  }
+  getData();
+
+  return (
+    <div className="FutureForecast">
+      <hr />
+      <DailyForecast forecast={forecast[0]} day="Mon" />
+      <DailyForecast forecast={forecast[0]} day="Tues" />
+      <DailyForecast forecast={forecast[0]} day="Wed" />
+      <DailyForecast forecast={forecast[0]} day="Thur" />
+      <DailyForecast forecast={forecast[0]} day="Fri" />
+      <DailyForecast forecast={forecast[0]} day="Sat" />
+      <DailyForecast forecast={forecast[0]} day="Sun" />
+    </div>
+  );
 }
